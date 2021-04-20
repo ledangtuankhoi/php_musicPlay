@@ -1,0 +1,121 @@
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        /* text-align: center; */
+        color: white;
+    }
+    
+    a {
+        text-decoration: none !important;
+        color: white;
+    }
+    
+    .flex-left {
+        position: fixed;
+        top: 56px;
+        /* right: 0; */
+        left: 0;
+        z-index: 1030;
+    }
+    
+    body,
+    .bg-img {
+        /* background-image: url("./img/podcasting-gear.jpeg"); */
+        /* background-image: url("img/upload/podcasting-gear.jpeg");
+    background-attachment: fixed;
+    background-position: center; */
+        background-color: #1D375A !important;
+    }
+    
+    .container-fluid {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+    
+    .bg {
+        background-color: #294162 !important;
+    }
+    
+    #left {
+        position: absolute;
+        top: 0;
+        margin-top: 56px;
+        /* z-index: 1000; */
+    }
+    
+    #left ul li a {
+        /* margin: 0px; */
+        padding: 0px !important;
+    }
+    
+    #cneter {
+        margin-left: 12rem;
+    }
+    
+
+    
+    .form-control {
+        margin: 0 5px 0 50px !important;
+        /* display: block; */
+        width: 700px !important;
+    }
+    
+    .controls {
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+        color: #55606e;
+        display: flex;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    
+    .controls__slider .slider {
+        background-color: #d8d8d8;
+        cursor: pointer;
+        position: relative;
+        margin-left: 16px;
+        margin-right: 16px;
+        border-radius: 2px;
+        height: 4px;
+    }
+    
+    .controls__progress .progress {
+        cursor: pointer;
+        background-color: #44bfa3;
+        border-radius: inherit;
+        position: absolute;
+        pointer-events: none;
+        width: 0;
+        height: 100%;
+    }
+    
+    .pin .progress__pin {
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        border-radius: 8px;
+        background-color: #44bfa3;
+        position: absolute;
+        pointer-events: all;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .32);
+        right: -8px;
+        top: -6px;
+    }
+    /* //////////////////////////////////////////////// */
+    
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: lightblue;
+        }
+    }

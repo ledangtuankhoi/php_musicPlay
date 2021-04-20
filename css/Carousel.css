@@ -1,0 +1,100 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dela Gothic One', cursive !important;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.news-wrap {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.news-grid {
+    width: auto;
+    position: relative;
+    /* background: #fff; */
+    border-radius: 5px;
+    /* overflow: hidden; */
+    /* border: 1px solid #ddd; */
+    /*box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);*/
+    margin: 10px;
+}
+
+.news-grid-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.news-grid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+    position: relative;
+}
+
+.news-grid-box {
+    display: block;
+    position: absolute;
+    text-align: center;
+    /* 	background: #26ccca; */
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    transition: .5s;
+}
+
+.news-grid-txt {
+    padding: 0 1rem;
+}
+
+.news-grid-txt p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    font-size: 15px;
+    padding: 0 !important;
+    font-weight: 300;
+    line-height: 170%;
+    letter-spacing: 1.5px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.hide {
+    display: block;
+}
+
+.news-grid:hover .news-grid-image img + .hide  {
+    /* filter: grayscale(1); */
+    display: block;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.news-grid:hover  + .hide {
+    /* filter: grayscale(1); */
+    /* display: block !important; */
+    /* transform: scale(1.1); */
+    /* transition: .5s; */
+}
+
+.news-grid:hover .news-grid-txt p {
+    text-decoration-line: none;
+    color: #2E4BF2;
+    letter-spacing: 2px;
+    transition: .5s;
+}
