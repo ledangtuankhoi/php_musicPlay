@@ -1,5 +1,6 @@
 <div id="bottom">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/bottom.css">
     <nav class="navbar fixed-bottom navbar-expand-sm bg">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,33 +49,14 @@
                             <i class="fas fa-random "></i>
                         </button>
                     </div>
-                    <div class="controls">
-                        <span id="durationUpdate">0:00</span>
-                        <!-- <div class="controls__slider slider" data-direction="horizontal">
-                            <div class="controls__progress progress">
-                                <div class="pin progress__pin" data-method="rewind"></div>
-                            </div>
-                        </div> -->
-                        <style>
-                            div#timeline1 {
-                                width: 100%;
-                                background: red;
-                                display: block;
-                            }
-
-                            div#seekObj1 {
-                                width: 20px;
-                                height: 20px;
-                                background: #000;
-                                border-radius: 50%;
-                            }
-                        </style>
-                        <div id="seekObjContainer" class="clearfix">
+                    <div class="controls d-flex justify-content-center align-items-center">
+                        <span id="durationUpdate">00</span>
+                        <div id="progress" class="mx-3">
                             <div id="timeline1">
                                 <div id="seekObj1" class="playhead" style="margin-left: 0px;"></div>
                             </div>
                         </div>
-                        <span id="duration">3:00</span>
+                        <span id="duration">00</span>
                     </div>
 
 
@@ -92,95 +74,53 @@
                             </svg>
                         </div>
                         <style>
-                            .hidden {
-                                display: none;
-                            }
-
-                            .volume {
+                            .green-audio-player .slider {
+                                flex-grow: 1;
+                                background-color: #d8d8d8;
+                                cursor: pointer;
                                 position: relative;
                             }
 
-                            .volume .volume-controls {
-                                width: 135px;
-                                height: 10px;
-                                background-color: #b4b0b0;
-                                border-radius: 7px;
+                            .green-audio-player .slider .gap-progress {
+                                background-color: #44bfa3;
+                                border-radius: inherit;
                                 position: absolute;
-                                left: 35px;
-                                bottom: 8px;
-                                flex-direction: column;
-                                align-items: center;
-                                display: flex;
+                                pointer-events: none;
                             }
 
-                            .volume .volume-controls .slider {
-                                margin-top: 12px;
-                                margin-bottom: 12px;
-                                width: 6px;
-                                border-radius: 3px;
+                            .green-audio-player .slider .gap-progress .pin {
+                                height: 16px;
+                                width: 16px;
+                                border-radius: 8px;
+                                background-color: #44bfa3;
+                                position: absolute;
+                                pointer-events: all;
+                                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.32);
                             }
 
-                            .volume .volume-controls .slider .progress {
-                                position: absolute;
-                                bottom: 0px;
-                                left: 0;
-                                height: 10px;
-                                width: 91px;
-                                border-radius: 0 10% 10% 0;
-                                background-color: white;
-
+                            .green-audio-player .slider .gap-progress .pin::after {
+                                content: "";
+                                display: block;
+                                background: rgba(0, 0, 0, 0);
+                                width: 200%;
+                                height: 200%;
+                                margin-left: -50%;
+                                margin-top: -50%;
+                                border-radius: 50%;
                             }
                         </style>
-                        <div class="volume-controls ">
-                            <div class="slider" data-direction="vertical">
-                                <div class="progress">
-                                    <div class="pin" id="volume-pin" data-method="changeVolume"></div>
+
+                        <div class="volume">
+
+                            <div class="volume__controls top">
+                                <div class="volume__slider slider" data-direction="vertical" tabindex="0">
+                                    <div class="volume__progress gap-progress" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="56.00000000000001" role="slider" style="height: 56%;">
+                                        <div class="pin volume__pin" data-method="changeVolume"></div>
+                                    </div>
+                                    <!-- <span class="message__offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span> -->
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            function getCoefficient(event) {
-                                let slider = getRangeBox(event);
-                                let rect = slider.getBoundingClientRect();
-                                let K = 0;
-                                if (slider.dataset.direction == 'horizontal') {
-
-                                    let offsetX = event.clientX - slider.offsetLeft;
-                                    let width = slider.clientWidth;
-                                    K = offsetX / width;
-
-                                } else if (slider.dataset.direction == 'vertical') {
-
-                                    let height = slider.clientHeight;
-                                    var offsetY = event.clientY - rect.top;
-                                    K = 1 - offsetY / height;
-
-                                }
-                                return K;
-                            }
-
-                            function inRange(event) {
-                                let rangeBox = getRangeBox(event);
-                                let rect = rangeBox.getBoundingClientRect();
-                                let direction = rangeBox.dataset.direction;
-                                if (direction == 'horizontal') {
-                                    var min = rangeBox.offsetLeft;
-                                    var max = min + rangeBox.offsetWidth;
-                                    if (event.clientX < min || event.clientX > max) return false;
-                                } else {
-                                    var min = rect.top;
-                                    var max = min + rangeBox.offsetHeight;
-                                    if (event.clientY < min || event.clientY > max) return false;
-                                }
-                                return true;
-                            }
-
-                            function changeVolume(event) {
-                                if (inRange(event)) {
-                                    player.volume = getCoefficient(event);
-                                }
-                            }
-                        </script>
                     </div>
 
                 </div>
@@ -189,3 +129,6 @@
         </div>
     </nav>
 </div>
+
+<!-- <script src="./js/bottom.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>

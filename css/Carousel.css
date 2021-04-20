@@ -75,18 +75,18 @@ body {
 }
 
 .hide {
-    display: none ;
+    display: none !important ;
 }
 
 
-.news-grid:hover .news-grid-image + .hide {
-    display: block;
+.news-grid:hover .d-none {
+    display: block !important;
+    
 }
-
+/* 
 .news-grid:hover .news-grid-txt p {
     text-decoration-line: none;
-    /* color: #2E4BF2; */
     letter-spacing: 2px;
     transition: .5s;
     display: block;
-}
+} */
