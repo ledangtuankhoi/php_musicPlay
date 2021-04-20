@@ -75,26 +75,18 @@ body {
 }
 
 .hide {
-    display: block;
+    display: none ;
 }
 
-.news-grid:hover .news-grid-image img + .hide  {
-    /* filter: grayscale(1); */
-    display: block;
-    transform: scale(1.1);
-    transition: .5s;
-}
 
-.news-grid:hover  + .hide {
-    /* filter: grayscale(1); */
-    /* display: block !important; */
-    /* transform: scale(1.1); */
-    /* transition: .5s; */
+.news-grid:hover .news-grid-image + .hide {
+    display: block;
 }
 
 .news-grid:hover .news-grid-txt p {
     text-decoration-line: none;
-    color: #2E4BF2;
+    /* color: #2E4BF2; */
     letter-spacing: 2px;
     transition: .5s;
+    display: block;
 }

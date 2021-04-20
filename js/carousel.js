@@ -3,7 +3,7 @@ $(document).ready(function() {
         items: 6,
         navigation: true,
         navigationText: ["", ""],
-        autoPlay: true,
+        autoPlay: false,
         autoplayTimeout: 100,
     });
 });
@@ -13,7 +13,7 @@ $(document).ready(function() {
         items: 6,
         navigation: true,
         navigationText: ["", ""],
-        autoPlay: true,
+        autoPlay: false,
         autoplayTimeout: 100,
 
     });

@@ -3,6 +3,7 @@ var audio = document.getElementById('audio');
 var audioPlayPause = document.getElementById('audioPlayPause');
 
 
+
 audioPlayPause.addEventListener('click', function() {
     if (count == 0) {
         count = 1;
@@ -18,17 +19,10 @@ audioPlayPause.addEventListener('click', function() {
 
 
 var audioList = document.querySelectorAll('.aTrigger');
+
 audioList.forEach(function(audioSinger,index){
-    var dataAudioName = audioSinger.getAttribute("data-audio");
-    // var audioName = dataAudioName.substring(dataAudioName.lastIndexOf("/") + 1 ,dataAudioName.length);
 
-    
-    // console.log('audioName'+ audioName);
-    //     console.log('audioList[index])'+ audioList[index]);
 
-    
-    
-    // audioList[index].nextElementSibling.innerHTML = audioName;
     audioSinger.addEventListener('click',function(index){
         thisisAudioSinger = this;
      
@@ -39,7 +33,7 @@ audioList.forEach(function(audioSinger,index){
 
         // audioSource = dataAudio;
         audioSource.setAttribute("src", dataAudio);
-        // console.log('audioSource'+ audioSource.getAttribute("src"));
+        console.log('audioSource'+ audioSource.getAttribute("src"));
 
 
         // document.getElementById("audioTitle").innerHTML = audioName;
@@ -58,20 +52,19 @@ audioList.forEach(function(audioSinger,index){
             audioPlayPause.innerHTML = '<i class="fa fa-pause"></i>';
 
 
-            // var songname = audioSingle.querySelector(".namesong").getAttribute("data-audio-name");
-            // var songsinger = audioSingle.querySelector(".songsinger").getAttribute("data-audio-singer");
-            // var songimg = audioSingle.querySelector(".audio-img").getAttribute("scr");
+            // var songname = songsinger.get ("songname").getAttribute("data-audio-name");
+            // var songsinger = songsinger.getElementById("songsinger").getAttribute("data-audio-singer");
+            // var songimg = songsinger.getElementById("songimg").getAttribute("scr");
 
             
-            var songname = audioSinger.querySelector(".namesong").getAttribute("data-audio-name");
-            var songsinger = audioSinger.querySelector(".songsinger").getAttribute("data-audio-singer");
-            var songimg = audioSinger.querySelector(".audio-img").getAttribute("src");
-            
-            // console.log(songimg);
 
-            console.log('song img ' + songimg);
-            console.log('songname   ' + songname);
-            console.log('songsingger ' + songsinger);
+            var songname = this.getAttribute('data-audio-name');
+            var songsinger = this.getAttribute("data-audio-singer");
+            var songimg =this.getAttribute("data-audio-img");
+            
+            console.log('songimg ' + songimg);
+                        console.log('songname   ' + songname);
+                        console.log('songsingger ' + songsinger);
 
             // var asd = document.getElementById("nutplayPause");
             // asd.innerHTML = '<i class="fas fa-Pause  "></i>';
@@ -81,8 +74,8 @@ audioList.forEach(function(audioSinger,index){
 
 
 
-            document.getElementById("musicControlTitle").innerHTML = "<a>" + songname + "</a>";
-            document.getElementById("muiscControlsinger").innerHTML = "<a>" + songsinger + "</a>";
+            document.getElementById("musicControlTitle").innerHTML = "<a herf=''>" + songname + "</a>";
+            document.getElementById("muiscControlsinger").innerHTML = "<a herf=''>" + songsinger + "</a>";
             document.getElementById("musiccontrolImg").setAttribute("src", songimg);
 
 
@@ -99,8 +92,8 @@ audioList.forEach(function(audioSinger,index){
             var s = parseInt(audio.duration % 60);
             var m = parseInt((audio.duration / 60)% 60);
 
-            console.log(m);
-            console.log(s);
+            // console.log(m);
+            // console.log(s);
 
 
             duration.innerHTML = m + ":" + s;
