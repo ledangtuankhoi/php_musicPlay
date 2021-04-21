@@ -3,18 +3,8 @@ $(document).ready(function() {
         items: 6,
         navigation: true,
         navigationText: ["", ""],
-        autoPlay: false,
+        autoPlay: true,
         autoplayTimeout: 100,
     });
 });
 
-$(document).ready(function() {
-    $("#news-slider2 ").owlCarousel({
-        items: 6,
-        navigation: true,
-        navigationText: ["", ""],
-        autoPlay: false,
-        autoplayTimeout: 100,
-
-    });
-});

@@ -7,7 +7,7 @@
   color: white;
 }
 body {
-  background-color: #1D375A;
+  background-color: #1d375a;
 }
 
 .bg_color {
@@ -29,12 +29,10 @@ p {
 }
 
 @media only screen and (max-width: 1400px) {
-  body {
-    /* background-color: #66A0F4 !important; */
-  }
+ 
 
   #scroll_left {
-    height: 285px;
+    min-height: 276px;
     /* border: 2px red solid; */
     overflow-y: scroll;
   }
@@ -47,7 +45,45 @@ p {
 
   #scroll_left::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #2255C1;
-    
+    background-color: #2255c1;
   }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    body{
+        background-color: violet;
+    }
+    .hide_1000{
+        display: none;
+    }
+
+/* ///// left */
+    #navbar-brand {
+        margin: 0;
+    }
+    /* #navbar-brand  */
+    #left{
+        width: 65px;
+    }
+
+    #scroll_left {
+        height: 276px;
+        /* border: 2px red solid; */
+        overflow-y: scroll;
+      }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    body{
+        background-color: violet;
+    }
+    #scroll_left {
+        min-height: 276px;
+        /* border: 2px red solid; */
+        overflow-y: scroll;
+      }
+
 }
