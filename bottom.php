@@ -64,64 +64,10 @@
 
             </div>
             <div id="control_right" style="width: 200px">
-                <div>
+                <div class="d-flex justify-content-center align-items-center">
 
-
-                    <div class="volume">
-                        <div class="volume-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="#566574" fill-rule="evenodd" d="M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z" id="speaker" />
-                            </svg>
-                        </div>
-                        <style>
-                            .green-audio-player .slider {
-                                flex-grow: 1;
-                                background-color: #d8d8d8;
-                                cursor: pointer;
-                                position: relative;
-                            }
-
-                            .green-audio-player .slider .gap-progress {
-                                background-color: #44bfa3;
-                                border-radius: inherit;
-                                position: absolute;
-                                pointer-events: none;
-                            }
-
-                            .green-audio-player .slider .gap-progress .pin {
-                                height: 16px;
-                                width: 16px;
-                                border-radius: 8px;
-                                background-color: #44bfa3;
-                                position: absolute;
-                                pointer-events: all;
-                                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.32);
-                            }
-
-                            .green-audio-player .slider .gap-progress .pin::after {
-                                content: "";
-                                display: block;
-                                background: rgba(0, 0, 0, 0);
-                                width: 200%;
-                                height: 200%;
-                                margin-left: -50%;
-                                margin-top: -50%;
-                                border-radius: 50%;
-                            }
-                        </style>
-
-                        <div class="volume">
-
-                            <div class="volume__controls top">
-                                <div class="volume__slider slider" data-direction="vertical" tabindex="0">
-                                    <div class="volume__progress gap-progress" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="56.00000000000001" role="slider" style="height: 56%;">
-                                        <div class="pin volume__pin" data-method="changeVolume"></div>
-                                    </div>
-                                    <!-- <span class="message__offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <i class="fa fa-volume-down fs-2"  aria-hidden="true"></i>
+                <div class="progress_volume"></div>
 
                 </div>
 

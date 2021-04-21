@@ -25,8 +25,8 @@
     <div class="container-fluid "  style="padding: 60px 0 60px 170px">
         <?php include_once("header.php") ?>
         <?php include_once("left.php") ?>
-        <?php include_once("bottom.php") ?>
-        <?php include_once("example.php") ?>
+        <?php include_once("bottom_copy.php") ?>
+    
 
     
         

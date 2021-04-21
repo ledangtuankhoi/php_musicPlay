@@ -19,3 +19,10 @@ div#seekObj1 {
     background: #FEFFFE;
     border-radius: 30%;
 }
+
+#control_right .progress_volume{
+    width: 80%;
+    height: 10px;
+    background-color: red;
+    border-width: 12px;
+}

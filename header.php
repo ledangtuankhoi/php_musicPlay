@@ -9,9 +9,9 @@ if (!isset($_SESSION)) {
 
 
 
-if (!isset($_SESSION['user'])) {
-    include_once("./login.php");
-}
+// if (!isset($_SESSION['user'])) {
+//     include_once("./login.php");
+// }
 
 if (isset($_SESSION['user'])) {
     require_once("./Entities/user.class.php");
