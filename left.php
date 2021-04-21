@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/sidebars.css">
+
 
 <body>
 
@@ -7,6 +7,13 @@
             <div class="clearfix">
 
                 <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="navbar-brand " style="margin-bottom: 3rem;">
+                        <a class="" href="#" style="text-transform: uppercase; font-weight: bolder;">live live</a>
+                        <img src="./img/upload/image.png" class="text-decoration-none" style="width: 23px;" alt="">
+
+                    </li>
+                    <hr>
+
                     <li class="nav-item">
                         <a href="#" class="nav-link ">
                             <i class="bi me-2 my-2 fas fa-home" width="16" height="16"></i>
@@ -86,7 +93,7 @@
                     </li>
 
                 </ul>
-                
+
             </div>
         </div>
     </div>

@@ -1,0 +1,13 @@
+#header{
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1em 1em 0.5rem 170px ;
+}
+#header .form-control{
+    opacity: 0.3;
+  filter: alpha(opacity=30);
+}

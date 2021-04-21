@@ -1,9 +1,8 @@
-<div id="bottom">
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
-    <link rel="stylesheet" href="./css/bottom.css">
+
+<div id="bottom " class="bg">
     <div class=" fixed-bottom ">
         <div class="row">
-            <div class="col-2">
+            <div class=" col-lg-2 col-sm-2">
                 <div id="bottom_left py-1">
                     <div class="d-flex  ">
                         <div class="row">
@@ -25,14 +24,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-1 text-end">
+            <div class="col-lg-1  col-sm-1 text-end">
                 <div class="pt-4">
                     <i class="fa fa-heart ps-2" aria-hidden="true"></i>
                     <i class="fa fa-list ps-2" aria-hidden="true"></i>
 
                 </div>
             </div>
-            <div class="col-6">
+            <div class="   col-lg-6  col-sm-6">
                 <div id="bottom_center">
                     <div class="row">
                         <div class="d-flex justify-content-center   ">
@@ -74,9 +73,9 @@
                 </div>
 
             </div>
-            <div class="col-1"></div>
+            <div class=" col-lg-1  col-sm-1 "></div>
 
-            <div class="col-2" id="control_right  ">
+            <div class="  col-lg-2  col-sm-2    " id="control_right  ">
 
                 <div class=" row mt-3">
                     <div class="col-6 ">
