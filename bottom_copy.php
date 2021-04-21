@@ -1,15 +1,15 @@
 
-<div id="bottom " class="bg">
-    <div class=" fixed-bottom ">
+
+    <div  id="bottom " class=" fixed-bottom bg_color ">
         <div class="row">
-            <div class=" col-lg-2 col-sm-2">
+            <div class=" col-2 ">
                 <div id="bottom_left py-1">
                     <div class="d-flex  ">
                         <div class="row">
                             <div class="col-5">
-                                <div class="" style=" border-radius: 50px;  margin: 0 10px;   width: 50px; object-fit: cover">
+                                <div class="" style=" border-radius: 50px; max-width:50px; object-fit: cover">
                                     <!-- <img id="musiccontrolImg" class="rounded-circle" src="" style=" width: 100% ;   "> -->
-                                    <img id="musiccontrolImg" class="rounded-circle" src="./img/img_ (1).jpg" style=" width: 100% ;   ">
+                                    <img id="musiccontrolImg" class="rounded-circle"  src="./img/img_ (1).jpg" style=" width: 100% ;   ">
                                 </div>
                             </div>
                             <div class="col-7">
@@ -24,14 +24,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-1  col-sm-1 text-end">
+            <div class="col-1   text-end">
                 <div class="pt-4">
                     <i class="fa fa-heart ps-2" aria-hidden="true"></i>
                     <i class="fa fa-list ps-2" aria-hidden="true"></i>
 
                 </div>
             </div>
-            <div class="   col-lg-6  col-sm-6">
+            <div class="   col-6  ">
                 <div id="bottom_center">
                     <div class="row">
                         <div class="d-flex justify-content-center   ">
@@ -73,9 +73,9 @@
                 </div>
 
             </div>
-            <div class=" col-lg-1  col-sm-1 "></div>
+            <div class=" col-1   "></div>
 
-            <div class="  col-lg-2  col-sm-2    " id="control_right  ">
+            <div class="  col-2      " id="control_right  ">
 
                 <div class=" row mt-3">
                     <div class="col-6 ">
@@ -97,7 +97,7 @@
 
 
 
-</div>
+
 
 <!-- <script src="./js/bottom.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>

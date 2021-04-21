@@ -15,7 +15,7 @@ require_once("./Entities/category.class.php");
 ?>
 
 <?php
-include_once("header.php");
+
 // $prods = Product::list_product();
 
 if (!isset($_GET["cateid"])) {

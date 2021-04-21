@@ -4,19 +4,11 @@
     right: 0;
     left: 0;
     z-index: 1030;
+    /* list-style: none; */
 }
 
-body {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100vh;
-  height: -webkit-fill-available;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-body > * {
-  flex-shrink: 0;
-  min-height: -webkit-fill-available;
+#left > div > div > ul > ul > li{
+  list-style: none;
 }
 
 .b-example-divider {
@@ -95,3 +87,5 @@ body > * {
 .lh-tight {
   line-height: 1.25;
 }
+
+
