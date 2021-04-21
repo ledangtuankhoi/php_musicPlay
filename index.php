@@ -26,6 +26,8 @@
         <?php include_once("header.php") ?>
         <?php include_once("left.php") ?>
         <?php include_once("bottom_copy.php") ?>
+        <?php include_once("example.php") ?>
+
     
 
     

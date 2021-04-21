@@ -52,7 +52,7 @@ if (isset($_SESSION['user'])) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex jus">
                 <li class="nav-item">
-                    <input class="form-control " type="search" placeholder="tên ca sĩ hoặc bài nhạc...." aria-label="Search">
+                    <input class=" border rounded-pill " type="search" placeholder="tên ca sĩ hoặc bài nhạc...." aria-label="Search">
                     <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
                 </li>
                 <li class="nav-item" style=" width: 40px; height: 40px;">
