@@ -60,10 +60,8 @@ audioList.forEach(function (audioSinger, index) {
       console.log("songimg " + songimg);
       console.log("songname   " + songname);
       console.log("songsingger " + songsinger);
-      document.getElementById("musicControlTitle").innerHTML =
-        "<a herf=''>" + songname + "</a>";
-      document.getElementById("muiscControlsinger").innerHTML =
-        "<a herf=''>" + songsinger + "</a>";
+      document.getElementById("musicControlTitle").innerHTML ="<a herf=''>" + songname + "</a>";
+      document.getElementById("muiscControlsinger").innerHTML ="<a herf=''>" + songsinger + "</a>";
       document.getElementById("musiccontrolImg").setAttribute("src", songimg);
 
       // xự lý thành progress

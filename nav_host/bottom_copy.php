@@ -13,7 +13,7 @@
                         <div class="col-7">
                             <div class="ml-2 mr-4 " style="width: 200px">
                                 <div id="musicControlTitle" style="white-space: nowrap; overflow: hidden;color:white;" >asdf</div>
-                                <div id="muiscControlsinger " style="color:white">asdfas</div>
+                                <div id="muiscControlsinger" style="color:white">asdfas</div>
                             </div>
                         </div>
                     </div>
