@@ -7,12 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Dela Gothic One', cursive !important;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-}
+
 
 .news-wrap {
     width: 100%;
@@ -79,5 +74,5 @@ body {
     text-decoration-line: none;
     letter-spacing: 2px;
     transition: .5s;
-    display: block;
+    /* display: block; */
 }

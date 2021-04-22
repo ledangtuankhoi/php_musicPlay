@@ -45,7 +45,7 @@ if (isset($_SESSION['user'])) {
         <div class="row">
             <div class="col-lg-7">
                 <form class="d-flex justify-content-center align-items-center">
-                    <input class="form-control me-2 rounded-pill bg-body " type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2 rounded-pill bg-body border " type="search" placeholder="Search" aria-label="Search">
 
                     <div>
                         <i class="fa fa-search fs-3" aria-hidden="true"></i>
@@ -72,13 +72,13 @@ if (isset($_SESSION['user'])) {
 
                         <!-- <a href="#" class="link-dark text-decoration-none" aria-expanded="false"> -->
 
-                        <a href="#">
+                        <a href="add_song.php">
                             <div class="me-2 ms-1  rounded-circle border border-success" width="40px">
                                 <i class="fas fa-upload" style="font-size: 20px; margin: 10px; height: 100%;"></i>
                             </div>
                         </a>
-                        <a href="login.php">
-                            <div class="me-2 ms-1 " onclick="">
+                        <a href="personal.php">
+                            <div class="me-2 ms-1 " >
                                 <img id="img_acc" src="./img/<?php echo $userimg ?>" width="40" height="40" class="  border border-white rounded-circle ">
                             </div>
                         </a>

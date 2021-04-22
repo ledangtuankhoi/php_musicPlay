@@ -8,6 +8,7 @@
 }
 i {
   color: white;
+  width: fit-content;
 }
 body {
   background-color: #1d375a;
@@ -25,29 +26,23 @@ p {
   color: white;
 }
 
+#left > div > ul > li:nth-child(4) > a {
+  background-color: #677aab;
+  /* opacity: .2; */
+  box-shadow: none;
+  border-radius: 25px;
+}
+
 .container-fluid {
   height: 100vh;
   width: 100%;
   position: relative;
 }
 
+
+
 @media only screen and (max-width: 1400px) {
-  #scroll_left {
-    min-height: 276px;
-    /* border: 2px red solid; */
-    overflow-y: scroll;
-  }
-
-  #scroll_left::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-  }
-
-  #scroll_left::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #2255c1;
-  }
+ 
 }
 
 @media only screen and (max-width: 1000px) {
@@ -58,31 +53,17 @@ p {
     display: none;
   }
 
-  /* ///// left */
-  #navbar-brand {
-    margin: 0;
-  }
-  /* #navbar-brand  */
-  #left {
-    width: 70px !important;
-    transition: 0.5s;
-  }
-
-  #scroll_left {
-    height: 276px;
-    /* border: 2px red solid; */
-    overflow-y: scroll;
-  }
+  
 /* /////center */
   body .container-fluid {
     padding-left: 70px !important;
-    transition: .5s;
+    transition: .2s;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   body {
-    /* background-color: violet; */
+    background-color: grey;
   }
   #scroll_left {
     min-height: 276px;
