@@ -20,7 +20,7 @@ body {
 }
 
 .news-grid {
-    width: auto;
+    /* width: auto; */
     position: relative;
     /* background: #fff; */
     border-radius: 5px;
@@ -44,16 +44,7 @@ body {
     position: relative;
 }
 
-.news-grid-box {
-    display: block;
-    position: absolute;
-    text-align: center;
-    /* 	background: #26ccca; */
-    right: 0;
-    bottom: 0;
-    padding: 10px;
-    transition: .5s;
-}
+
 
 .news-grid-txt {
     padding: 0 1rem;
@@ -74,17 +65,17 @@ body {
     font-weight: bold;
 }
 
-.hide {
+.hide_img {
     display: none !important ;
 }
 
 
-.news-grid:hover .d-none {
+.news-grid:hover .hide_img {
     display: block !important;
     
 }
 
-.news-grid:hover .news-grid-txt p {
+.news-grid:hover .news-grid-image .audio-img {
     text-decoration-line: none;
     letter-spacing: 2px;
     transition: .5s;

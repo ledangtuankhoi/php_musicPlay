@@ -1,10 +1,8 @@
 <?php
 
 require_once("./Entities/song.class.php");
-//include ("/LAB3/Entities/product.class.php");
 require_once("./Entities/category.class.php");
-//include ("/LAB3/Entities/category.class.php");
-
+echo $_POST["txtName"];
 if (isset($_POST["btnsubmit"])) {
 
 
@@ -31,11 +29,22 @@ if (isset($_POST["btnsubmit"])) {
         header("Location: add_song.php?inserted");
     }
 }
+if (!isset($_SESSION['user'])) {
+    echo "asdfasdfsadfasd";
+    include_once('./login.php');
+    echo "sfasdfas";
+} else {
+    require_once("./Entities/user.class.php");
 
 
-?>
+    $user = User::login($_SESSION['user']);
+    print_r($user);
 
 
+    $username = $user[0]["name"];
+    $userimg = $user[0]["userImg"];
+
+    ?>
 
 
 <div id="center " class=" " style="margin: 70px 170px; padding-bottom: 70px; ">
@@ -53,24 +62,24 @@ if (isset($_POST["btnsubmit"])) {
 
                 <div class="">
                     <label for="txtname" class="form-label">tên bài hát</label>
-                    <input type="text" class="form-control" name="txtName" value="<?php echo isset($_POST["txtName"]) ? $_POST["txtName "] : ""; ?>" required>
-                    <div class="invalid-feedback">
-                        Please provide
-                    </div>
+                    <input type="text" class="form-control" name="txtName" value="<?php echo isset($_POST["txtName"]) ? $_POST["txtName "] : ""; ?>" >
+                        <!-- <div class="invalid-feedback">
+                            Please provide
+                        </div> -->
                 </div>
                 <div class="">
                     <label for="txtsinger" class="form-label">tên ca sĩ</label>
-                    <input type="text" class="form-control" name="txtsinger" value="<?php echo isset($_POST["txtsinger"]) ? $_POST["txtsinger"] : ""; ?>"required>
-                    <div class="invalid-feedback">
+                    <input type="text" class="form-control" name="txtsinger" value="<?php echo isset($_POST["txtsinger"]) ? $_POST["txtsinger"] : ""; ?>">
+                    <!-- <div class="invalid-feedback">
                         Please provide
-                    </div>
+                    </div> -->
                 </div>
                 <div class="">
                     <label for="txtwriter" class="form-label">người sáng tác</label>
-                    <input type="text" class="form-control" name="txtwriter" value="<?php echo isset($_POST["txtwriter"]) ? $_POST["txtwriter"] : ""; ?>"required>
-                    <div class="invalid-feedback">
+                    <input type="text" class="form-control" name="txtwriter" value="<?php echo isset($_POST["txtwriter"]) ? $_POST["txtwriter"] : ""; ?>">
+                    <!-- <div class="invalid-feedback">
                         Please provide
-                    </div>
+                    </div> -->
                 </div>
                 <div class="">
                     <label  class="form-label">thể loại bài hát</label>
@@ -138,4 +147,17 @@ if (isset($_POST["btnsubmit"])) {
 
 
 </div>
+    <?php
+
+}
+
+?>
+
+<?php if(isset($_SESSION['user'])){  ?>
+
+
+
+
+<?php } ?>
+
 <!-- Form sản phẩm-->

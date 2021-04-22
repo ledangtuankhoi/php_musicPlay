@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#news-slider ").owlCarousel({
+    $("#news-slider").owlCarousel({
         items: 6,
         navigation: true,
         navigationText: ["", ""],

@@ -1,14 +1,15 @@
 <?php
-session_start();
 
-// if (isset($_SESSION['user'])  != "") {
-//     header("location: index.php");
 
-// }
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+if (isset($_SESSION['user'])  != "") {
+    header("location: index.php");
+
+}
 require_once("./Entities/user.class.php");
-
-// echo "<h2> ".$_POST['txtuser']."</h2>";
-// echo "<h2> ".$_POST['txtpass']."</h2>";
 
 
 
@@ -17,12 +18,12 @@ if (isset($_POST['btn_login'])) {
     $u_user = $_POST['txtuser'];
     $u_pass = $_POST['txtpass'];
     $result = User::checklogin($u_user, $u_pass);
-    echo "sadf"; 
-    print_r($result);
+    // echo "sadf"; 
+    // print_r($result);
 
     
 
-    if ($result[0] == 0) {
+    if ($result[0] <= 0) {
 ?>
         <script>
             alert('tai khoan khong dung')
@@ -30,8 +31,8 @@ if (isset($_POST['btn_login'])) {
 <?php
     } else {
         $_SESSION['user'] = $u_user;
-        echo "<h2>đúng rroi</h2>";
-        header('location:index.php');
+        // echo "<h2>đúng rroi</h2>";
+        header('location:/#');
         // header('location:header.php');
         // header('location: footer.php');
 
@@ -60,10 +61,10 @@ if (isset($_POST['btn_login'])) {
             <div class="col_half last">
                 <form method="post" >
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                        <input type="text" name="txtuser" placeholder="UserName" required />
+                        <input type="text black" name="txtuser" placeholder="UserName" required />
                     </div>
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                        <input type="password" name="txtpass" placeholder="Password" required />
+                        <input type="password black" name="txtpass" placeholder="Password" required />
                     </div>
                     <input class="button" name="btn_login" type="submit" value="login In" />
                     <div class="row clearfix bottom_row">
