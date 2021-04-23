@@ -1,34 +1,15 @@
 <?php
+
 require_once("./config/db.class.php");
-// session_start();
 
-
-if (!isset($_SESSION)) {
-    session_start();
-}
-
-
-
-// if (!isset($_SESSION['user'])) {
-//      ;
-// }
-
+require_once("./Entities/user.class.php");
 if (isset($_SESSION['user'])) {
-    require_once("./Entities/user.class.php");
-
 
     $user = User::login($_SESSION['user']);
 
-  
-
-
     $username = $user[0]["name"];
     $userimg = $user[0]["userImg"];
-    // echo $username;
-    // echo $userimg;
 
-
-    // echo "h2>xin chao ".$_SESSION['user']."</h2>";
 } else {
     // echo "ban chua danng nhap <a href='./login.php' >login</a>";
     $userimg = "upload/chamhoi.png";
@@ -96,7 +77,6 @@ if (isset($_SESSION['user'])) {
 <script>
     function img_acc() {
         document.getElementById("img_acc").setAttribute("src", "./img/upload/chamhoi.png")
-
     }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

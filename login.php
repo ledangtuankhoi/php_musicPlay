@@ -18,8 +18,7 @@ if (isset($_POST['btn_login'])) {
     $u_user = $_POST['txtuser'];
     $u_pass = $_POST['txtpass'];
     $result = User::checklogin($u_user, $u_pass);
-    // echo "sadf"; 
-    // print_r($result);
+
 
     
 
@@ -60,10 +59,10 @@ if (isset($_POST['btn_login'])) {
             </div>
             <div class="col_half last">
                 <form method="post" >
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                    <div class="input_field"> 
                         <input type="text black" name="txtuser" placeholder="UserName" required />
                     </div>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <div class="input_field">
                         <input type="password black" name="txtpass" placeholder="Password" required />
                     </div>
                     <input class="button" name="btn_login" type="submit" value="login In" />

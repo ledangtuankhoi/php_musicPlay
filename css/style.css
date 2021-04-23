@@ -20,7 +20,7 @@ body .container-fluid {
 .bg_color {
   /* background-color: #294162; */
   /* background-color: #294162; */
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 a {
   text-decoration: none !important;
@@ -41,6 +41,10 @@ p {
   height: 100vh;
   width: 100%;
   position: relative;
+}
+
+#song_cate .silder{
+  margin-top: 44px;
 }
 
 

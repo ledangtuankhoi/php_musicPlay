@@ -9,9 +9,21 @@ require_once("./Entities/category.class.php");
 
 
 $songs = Song::list_song();
-
+// print_r($songs);
 
 $cates = Category::list_category();
+// print_r($cates);
+
+$ROCK = Song::list_song_by_cate("ROCK");
+$RAP = Song::list_song_by_cate("RAP");
+$ALTERNATIVE = Song::list_song_by_cate("ALTERNATIVE");
+$HIPHOP = Song::list_song_by_cate("HIPHOP");
+$RNB  = Song::list_song_by_cate("RNB ");
+$ACOUSTIC  = Song::list_song_by_cate("ACOUSTIC ");
+$OPM  = Song::list_song_by_cate("OPM ");
+$RAP = Song::list_song_by_cate("RAP");
+
+// print_r($rock);
 // print_r($cates)
 ?>
 
@@ -25,15 +37,13 @@ $cates = Category::list_category();
 <div class="owl-slider">
     <div class="d-flex justify-content-between">
 
-        <h2 class="">Hôm nay nghe gì :D</h2>
+        <h3 class="">Hôm nay nghe gì :D</h3>
         <div>
             <button class="btn back "><i class="fas fa-arrow-circle-left"></i></button>
             <button class="btn next "><i class="fas fa-arrow-circle-right"></i></button>
         </div>
     </div>
-    <audio id="audio">
-        <source src="" id="audioSource" type="audio/mpeg">
-    </audio>
+
 
     <div id="carousel" class="list_song owl-carousel">
         <?php foreach ($songs as $item) { ?>
@@ -63,49 +73,3 @@ $cates = Category::list_category();
     </div>
 </div>
 
-
-<!-- danh sách theo loại -->
-<div class="silder">
-    <div class="d-flex justify-content-between">
-
-        <h2 class=""></h2>
-        <div>
-            <button class="btn back_cate"><i class="fas fa-arrow-circle-left"></i></button>
-            <button class="btn next_cate"><i class="fas fa-arrow-circle-right"></i></button>
-        </div>
-    </div>
-
-    <div id="carousel" class="list_cate owl-carousel">
-        <?php foreach ($songs as $item) { ?>
-            <div class="item">
-                <!-- <img class="owl-lazy" data-src="https://i.pinimg.com/originals/84/67/26/846726299dc5abbeb5d60016f0fb32e9.jpg" alt=""> -->
-                <div class='news-grid-image' style=' height: 150px !important; '>
-                    <!-- <i class="fa fa-play"></i> -->
-                    <img class="audio-img position-relative rounded-3" src='<?php echo $item["songimg"] ?>'>
-
-                    <div class="hide_nut" style=" position: absolute;top: 40%;left: 40%;right: 50%;">
-                        <div class="d-flex justify-content-center">
-                            <i class="fa fa-heart ms-4 float-start" style="font-size: 20px; "></i>
-                            <a class="aTrigger" data-active="" data-audio="./audio/<?php echo $item["songfile"] ?>" data-audio-name="<?php echo $item["songname"]; ?>" data-audio-singer="<?php echo $item["songsinger"] ?>" data-audio-img="<?php echo $item["songimg"] ?>">
-                                <i class="fa fa-play ms-4" style="font-size: 20px;"></i>
-                            </a>
-                            <!-- <i class="fa fa-hourglass ms-4 "  aria-hidden="true"></i> -->
-                            <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="news-grid-txt">
-                    <p class=" text-while" style="margin-bottom: 0; color:white"><?php echo $item["songname"]; ?></p>
-                </div>
-            </div>
-        <?php } ?>
-
-    </div>
-</div>
-
-<script>
-
-</script>

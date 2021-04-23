@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" crossorigin="anonymous" /> -->
 
 
     <link rel="stylesheet" href="./css/style.css">
@@ -29,10 +29,15 @@
 <body>
     <div class="container-fluid">
 
+
+        <audio id="audio">
+            <source src="" id="audioSource" type="audio/mpeg">
+        </audio>
         <?php include_once("./nav_host/header.php") ?>
         <?php include_once("./nav_host/left.php") ?>
         <?php include_once("./nav_host/bottom_copy.php") ?>
         <?php include_once("./nav_host/example.php") ?>
+        <?php include_once("./song_cate.php") ?>
 
 
 

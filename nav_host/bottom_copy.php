@@ -1,4 +1,4 @@
-<div id="bottom " class=" fixed-bottom bg_color mt-1 ">
+<div id="bottom " class=" fixed-bottom mt-1 " style="background-color: #34478d;">
     <div class="row">
         <div class=" col-2 ">
             <div id="bottom_left py-1">

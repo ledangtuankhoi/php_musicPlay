@@ -53,7 +53,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link  ">
+                            <a href="song_cate.php" class="nav-link  ">
                                 <i class="bi me-2 my-2 fas fa-record-vinyl" width="16" height="16"></i>
                                 <!-- <i class="fab fa-cc-discover"></i> -->
                                 <span class="hide_1000">thể loại nhạc</span>
