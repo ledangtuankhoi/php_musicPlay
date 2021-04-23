@@ -125,6 +125,7 @@ class Song
         $db = new Db();
         // $sql = "select * from tblsongs where CateID = '$cateID' ";
         $sql = "SELECT * FROM `tblsongs` WHERE songcat = '$cateID'";
+        // SELECT * FROM tblsongs WHERE songcat = (SELECT catname FROM tblcategory WHERE id= "34");
         $result = $db->select_to_array($sql);
         return $result;
     }

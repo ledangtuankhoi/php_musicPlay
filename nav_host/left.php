@@ -9,13 +9,13 @@
                 </li>
                 <hr>
                 <li class="nav-item">
-                    <a href="#" class="nav-link ">
+                    <a href="personal.php" class="nav-link ">
                         <i class="bi me-2 my-2 fas fa-home" width="16" height="16"></i>
                         <span class="hide_1000">Cá nhân</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="add_song.php" class="nav-link active ">
+                    <a href="index.php" class="nav-link active ">
                         <i class="bi me-2 my-2 fab fa-angellist" width="16" height="16"></i>
                         <!-- <i class="fab fa-cc-discover"></i> -->
 

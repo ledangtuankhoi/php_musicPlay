@@ -32,6 +32,15 @@ class Category
     public static function list_category_input_cate_outIMG($cate){
         $db = new Db();
         $sql = "SELECT catimage FROM tblcategory = '$cate'";
+        
+        $result = $db-> select_to_array($sql);
+        return $result;
+    }
+
+    public static function list_category_input_id_outName($id){
+        $db = new Db();
+        $sql = "SELECT catname FROM tblcategory  WHERE id= '$id'";
+        // $sql = 'SELECT catname FROM tblcategory WHERE id= "34"'
         $result = $db-> select_to_array($sql);
         return $result;
     }

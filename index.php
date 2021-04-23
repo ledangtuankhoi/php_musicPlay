@@ -37,7 +37,7 @@
         <?php include_once("./nav_host/left.php") ?>
         <?php include_once("./nav_host/bottom_copy.php") ?>
         <?php include_once("./nav_host/example.php") ?>
-        <?php include_once("./song_cate.php") ?>
+     
 
 
 

@@ -1,9 +1,14 @@
 <?php
-
 require_once("./config/db.class.php");
 
-require_once("./Entities/user.class.php");
+
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 if (isset($_SESSION['user'])) {
+    require_once("./Entities/user.class.php");
+
 
     $user = User::login($_SESSION['user']);
 
@@ -11,7 +16,7 @@ if (isset($_SESSION['user'])) {
     $userimg = $user[0]["userImg"];
 
 } else {
-    // echo "ban chua danng nhap <a href='./login.php' >login</a>";
+
     $userimg = "upload/chamhoi.png";
 
 

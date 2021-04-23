@@ -30,8 +30,8 @@ if (isset($_POST['btn_login'])) {
 <?php
     } else {
         $_SESSION['user'] = $u_user;
-        // echo "<h2>đúng rroi</h2>";
-        header('location:/#');
+        echo "<h2>đúng rroi</h2>";
+        // header('location:/#');
         // header('location:header.php');
         // header('location: footer.php');
 
