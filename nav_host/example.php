@@ -119,159 +119,88 @@ $RAP = Song::list_song_by_cate("RAP");
 
     </div>
 
-
-
-    <!-- // anblm -->
+    
     <style>
-        #mix {
-            width: 200px
+        .big {
+            background: #ac0000 !important;
+            height: 130%;
         }
 
-        #mix .row {
-            padding: 0 !important;
-            --bs-gutter-x: 0;
-            --bs-gutter-y: 0;
-        }
-
-        #mix .row .well img {
-            /* height: 65px; */
-            width: 100%;
-            object-fit: cover;
-        }
-
-        #mix .row .well .highlights {
-            height: 65px;
-            padding: 2px 2px;
-            object-fit: cover;
+        .medium {
+            background: #dd0000 !important;
         }
     </style>
 
-    <div class="row">
-        <div class="col-md-4">
-            <div id="mix">
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="well">
-                            <img class=" highlights img-fluid " src="./img/img_ (99).jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <img class="img-fluid" src="<?php echo isset($sdf) ? $sdf : "./img/img_ (99).jpg" ?>" alt="">
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="well">
-                            <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="well">
-                            <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="well">
-                            <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                        </div>
-                    </div>
-                </div>
+    <div id="demos">
+        <div class="loop owl-carousel">
+            <div class="item">
+                <h4>1</h4>
+            </div>
+            <div class="item">
+                <h4>2</h4>
+            </div>
+            <div class="item">
+                <h4>3</h4>
+            </div>
+            <div class="item">
+                <h4>4</h4>
+            </div>
+            <div class="item">
+                <h4>5</h4>
+            </div>
+            <div class="item">
+                <h4>6</h4>
+            </div>
+            <div class="item">
+                <h4>7</h4>
+            </div>
+            <div class="item">
+                <h4>8</h4>
+            </div>
+            <div class="item">
+                <h4>9</h4>
+            </div>
+            <div class="item">
+                <h4>10</h4>
+            </div>
+            <div class="item">
+                <h4>11</h4>
+            </div>
+            <div class="item">
+                <h4>12</h4>
             </div>
         </div>
-        <div class="col-md-4">
-            <div id="mix">
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="well">
-                            <!-- //  chua hinh album -->
-                            <img class=" highlights img-fluid " src="./img/img_ (99).jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <!-- chua hinh song -->
-                                    <img class="img-fluid" src="<?php echo isset($sdf) ? $sdf : "./img/img_ (99).jpg" ?>" alt="">
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="well">
-                            <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="well">
-                            <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="well">
-                            <img class="img-fluid" src="./img/img_ (98).jpg" alt="">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+ 
+    <script>
+        $(function() {
+            $('.loop').on('translate.owl.carousel', function(e) {
+                idx = e.item.index;
+                console.log(idx);
+                
+                $('.owl-item.big').remove('big');
+                $('.owl-item.medium').remove('medium');
+                $('.owl-item').eq(idx - 1).addClass('medium');
+                console.log($('.owl-item').eq(idx));
+                $('.owl-item').eq(idx).addClass('big');
+                $('.owl-item').eq(idx + 1).addClass('medium');
+            });
+            
+
+
+            $('.loop').owlCarousel({
+                center: true,
+                items: 5,
+                loop: true,
+                margin: 10,
+                // autoplay: true,
+                autoplayTimeout: 1000,
+                nav: true,
+            })
+            // console.log(initialized.owl.carousel);
+
+
+
+            
+        });
+    </script>
