@@ -130,6 +130,17 @@ class Song
         return $result;
     }
 
+    public static function like_song($songName){
+        $db = new Db();
+        // $sql = "select * from tblsongs where CateID = '$cateID' ";
+        $sql = "UPDATE tblsongs SET songpoints = songpoints + 1 WHERE songname = '$songName'";
+        // SELECT * FROM tblsongs WHERE songcat = (SELECT catname FROM tblcategory WHERE id= "34");
+        // $result = $db->select_to_array($sql);
+         $db->query_execute($sql);
+      
+       
+    }
+
     public static function list_song_relate($cateID, $id)
     {
         $db = new Db();

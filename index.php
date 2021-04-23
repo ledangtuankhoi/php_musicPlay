@@ -53,6 +53,7 @@
 <script src="./js/sidebars.js"></script>
 <script src="./js/controlmusicPlay.js"></script>
 <script src="./js/carousel.js"></script>
+<script src="./js/like_song.js"></script>
 
 
 <!-- <script src="https://code.jquery.com/jquery-1.12.4.js" crossorigin="anonymous"></script> -->

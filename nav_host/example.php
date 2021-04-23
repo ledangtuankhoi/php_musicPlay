@@ -37,6 +37,19 @@ $RAP = Song::list_song_by_cate("RAP");
 <!-- danh sach nhạc -->
 <div style="padding-top: 5px;padding-bottom: 70px;">
 
+<?php
+
+    if(isset($_GET['songname'])){
+        require_once("./config/db.class.php");
+        $songname = $_GET['songname'];
+        $db = new Db();
+        $sql = "UPDATE tblsongs SET songpoints = songpoints + 1 WHERE songname = '$songname'";
+        // $sql = "SELECT * FROM tblsongs";
+        $result = $db->query_execute($sql);
+        
+    }
+?>
+
     <div class="owl-slider">
         <div class="d-flex justify-content-between">
 
@@ -56,11 +69,19 @@ $RAP = Song::list_song_by_cate("RAP");
 
                         <div class="hide_nut" style=" position: absolute;top: 40%;left: 40%;right: 50%;">
                             <div class="d-flex justify-content-center">
-                                <i class="fa fa-heart ms-4 float-start" style="font-size: 20px; "></i>
+                                <!-- //  click them like theem diem cho song -->
+                                <a class="like" href="index.php?songname=<?php echo $item["songname"]; ?>" data-audio-name="<?php echo $item["songname"]; ?>" >
+                                
+                                    <i class="fa fa-heart ms-4 float-start" style="font-size: 20px; "></i>
+                                </a>
+                                <!-- //  click play nhac  -->
                                 <a class="aTrigger" data-active="" data-audio="./audio/<?php echo $item["songfile"] ?>" data-audio-name="<?php echo $item["songname"]; ?>" data-audio-singer="<?php echo $item["songsinger"] ?>" data-audio-img="<?php echo $item["songimg"] ?>">
                                     <i class="fa fa-play ms-4" style="font-size: 20px;"></i>
                                 </a>
-                                <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
+                                <!-- //  click theem vao danh sach   -->
+                                <a href="">
+                                    <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
+                                </a>
 
                             </div>
                         </div>
@@ -76,6 +97,7 @@ $RAP = Song::list_song_by_cate("RAP");
         </div>
 
     </div>
+
 
 
 
@@ -118,89 +140,3 @@ $RAP = Song::list_song_by_cate("RAP");
         </div>
 
     </div>
-
-    
-    <style>
-        .big {
-            background: #ac0000 !important;
-            height: 130%;
-        }
-
-        .medium {
-            background: #dd0000 !important;
-        }
-    </style>
-
-    <div id="demos">
-        <div class="loop owl-carousel">
-            <div class="item">
-                <h4>1</h4>
-            </div>
-            <div class="item">
-                <h4>2</h4>
-            </div>
-            <div class="item">
-                <h4>3</h4>
-            </div>
-            <div class="item">
-                <h4>4</h4>
-            </div>
-            <div class="item">
-                <h4>5</h4>
-            </div>
-            <div class="item">
-                <h4>6</h4>
-            </div>
-            <div class="item">
-                <h4>7</h4>
-            </div>
-            <div class="item">
-                <h4>8</h4>
-            </div>
-            <div class="item">
-                <h4>9</h4>
-            </div>
-            <div class="item">
-                <h4>10</h4>
-            </div>
-            <div class="item">
-                <h4>11</h4>
-            </div>
-            <div class="item">
-                <h4>12</h4>
-            </div>
-        </div>
-    </div>
- 
-    <script>
-        $(function() {
-            $('.loop').on('translate.owl.carousel', function(e) {
-                idx = e.item.index;
-                console.log(idx);
-                
-                $('.owl-item.big').remove('big');
-                $('.owl-item.medium').remove('medium');
-                $('.owl-item').eq(idx - 1).addClass('medium');
-                console.log($('.owl-item').eq(idx));
-                $('.owl-item').eq(idx).addClass('big');
-                $('.owl-item').eq(idx + 1).addClass('medium');
-            });
-            
-
-
-            $('.loop').owlCarousel({
-                center: true,
-                items: 5,
-                loop: true,
-                margin: 10,
-                // autoplay: true,
-                autoplayTimeout: 1000,
-                nav: true,
-            })
-            // console.log(initialized.owl.carousel);
-
-
-
-            
-        });
-    </script>

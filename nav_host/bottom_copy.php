@@ -7,7 +7,7 @@
                         <div class="col-5">
                             <div class="" style=" border-radius: 50px; max-width:50px; object-fit: cover">
                                 <!-- <img id="musiccontrolImg" class="rounded-circle" src="" style=" width: 100% ;   "> -->
-                                <img id="musiccontrolImg" class="rounded-circle" src="./img/img_ (1).jpg" style=" width: 100% ;   ">
+                                <img id="musiccontrolImg" class="rounded-circle mx-2" src="./img/img_ (1).jpg" >
                             </div>
                         </div>
                         <div class="col-7">
@@ -41,7 +41,7 @@
                         </button>
                         <div class="d-flex flex-column">
 
-                            <button id="audioPlayPause" class=" btn  border border-3  rounded-circle  ">
+                            <button id="audioPlayPause" class=" btn  border  rounded-circle  ">
                                 <i class="fas fa-play  "></i>
 
                             </button>

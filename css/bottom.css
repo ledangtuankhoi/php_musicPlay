@@ -1,5 +1,16 @@
 #bottom{
     background-color: #34478d !important;
+    height: 40px;
+}
+
+#musiccontrolImg{
+    height: 40px;
+    width: 40px;
+}
+#bottom_center  div .row{
+
+    height: 20px;
+
 }
 
 #progress{
