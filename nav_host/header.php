@@ -39,8 +39,8 @@ if (isset($_SESSION['user'])) {
 
 ?>
 <!-- <link   rel="stylesheet" href="./css/style.css"> -->
-<div class=" " id="header">
-    <nav class=" ">
+<div class="bg_color  " id="header">
+    <nav class="">
         <!-- <div class="container-fluid"> -->
         <div class="row">
             <div class="col-lg-7">
