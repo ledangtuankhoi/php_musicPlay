@@ -109,7 +109,8 @@ class Song
         $sql = "UPDATE tblsongs SET songpoints = songpoints + 1 WHERE songname = '$songName'";
         // SELECT * FROM tblsongs WHERE songcat = (SELECT catname FROM tblcategory WHERE id= "34");
         // $result = $db->select_to_array($sql);
-         $db->query_execute($sql);
+         $result = $db->query_execute($sql);
+         return $result;
     }
 
     public static function list_singer_yeu_thich(){
