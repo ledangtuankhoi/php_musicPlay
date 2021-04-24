@@ -44,59 +44,7 @@ $singer = Song::list_singer_yeu_thich();
         
     }
 ?>
-<?php
-    if(isset($_GET['cateName'])){
 
-        $cateName = Song::list_song_by_cate($_GET['cateName'])
-?>
-        <!-- // list cate song click -->
-    <div class="owl-slider">
-        <div class="d-flex justify-content-between">
-
-            <h3 class="">bạn thích cái này! <h2><?php echo $_GET['cateName'] ?></h2> </h3>
-            
-        </div>
-
-
-        <div id="carousel" class="list_song_by_cate owl-carousel">
-            <?php foreach ($cateName as $item) { ?>
-                <div class="item ">
-                    <div class='news-grid-image rounded-3' style=' height: 150px !important; '>
-                        <img class="audio-img position-relative" src='<?php echo $item["songimg"] ?>'>
-
-                        <div class="hide_nut" style=" position: absolute;top: 40%;left: 40%;right: 50%;">
-                            <div class="d-flex justify-content-center">
-                                <!-- //  click them like theem diem cho song -->
-                                <a class="like" href="index.php?songname=<?php echo $item["songname"]; ?>" data-audio-name="<?php echo $item["songname"]; ?>" >
-                                
-                                    <i class="fa fa-heart ms-4 float-start" style="font-size: 20px; "></i>
-                                </a>
-                                <!-- //  click play nhac  -->
-                                <a class="aTrigger" data-active="" data-audio="./audio/<?php echo $item["songfile"] ?>" data-audio-name="<?php echo $item["songname"]; ?>" data-audio-singer="<?php echo $item["songsinger"] ?>" data-audio-img="<?php echo $item["songimg"] ?>">
-                                    <i class="fa fa-play ms-4" style="font-size: 20px;"></i>
-                                </a>
-                                <!-- //  click theem vao danh sach   -->
-                                <a href="">
-                                    <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="news-grid-txt">
-                        <p class=" text-while" style="margin-bottom: 0; color:white"><?php echo $item["songname"]; ?></p>
-                    </div>
-                </div>
-            <?php } ?>
-
-        </div>
-
-    </div>
-<?php
-    }
-?>
 
 
 
@@ -173,10 +121,7 @@ $singer = Song::list_singer_yeu_thich();
 
                         <div class="hide_nut" style=" position: absolute;top: 40%;left: 40%;right: 50%;">
                             <div class="d-flex justify-content-center">
-                                <i class="fa fa-heart ms-4 float-start" style="font-size: 20px; "></i>
-                                <i class="fa fa-play ms-4" style="font-size: 20px;"></i>
-                                <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
-
+                                <i class="fa fa-heart ms-4" style="font-size: 20px; "></i>
                             </div>
                         </div>
 
@@ -192,6 +137,77 @@ $singer = Song::list_singer_yeu_thich();
         </div>
 
     </div>
+
+
+
+<style type="text/css">
+        .list_cate{
+            height: 0px;
+            display: none;
+        }
+    </style>
+
+<?php
+    if(isset($_GET['cateName'])){
+
+        $cateName = Song::list_song_by_cate($_GET['cateName'])
+?>
+    <style type="text/css">
+        .list_cate{
+            display: block;
+            height: 100%;
+            overflow: hidden;
+            transition:  .4;
+        }
+    </style>
+        <!-- // list cate song click -->
+    <div class=" list_cate owl-slider">
+        <div class="d-flex justify-content-between">
+
+            <h3 class="">bạn thích cái này! <h2><?php echo $_GET['cateName'] ?></h2> </h3>
+            
+        </div>
+
+
+        <div id="carousel" class="list_song_by_cate owl-carousel">
+            <?php foreach ($cateName as $item) { ?>
+                <div class="item ">
+                    <div class='news-grid-image rounded-3' style=' height: 150px !important; '>
+                        <img class="audio-img position-relative" src='<?php echo $item["songimg"] ?>'>
+
+                        <div class="hide_nut" style=" position: absolute;top: 40%;left: 40%;right: 50%;">
+                            <div class="d-flex justify-content-center">
+                                <!-- //  click them like theem diem cho song -->
+                                <a class="like" href="index.php?songname=<?php echo $item["songname"]; ?>" data-audio-name="<?php echo $item["songname"]; ?>" >
+                                
+                                    <i class="fa fa-heart ms-4 float-start" style="font-size: 20px; "></i>
+                                </a>
+                                <!-- //  click play nhac  -->
+                                <a class="aTrigger" data-active="" data-audio="./audio/<?php echo $item["songfile"] ?>" data-audio-name="<?php echo $item["songname"]; ?>" data-audio-singer="<?php echo $item["songsinger"] ?>" data-audio-img="<?php echo $item["songimg"] ?>">
+                                    <i class="fa fa-play ms-4" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- //  click theem vao danh sach   -->
+                                <a href="">
+                                    <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="news-grid-txt">
+                        <p class=" text-while" style="margin-bottom: 0; color:white"><?php echo $item["songname"]; ?></p>
+                    </div>
+                </div>
+            <?php } ?>
+
+        </div>
+
+    </div>
+<?php
+    }
+?>
 
 
 
@@ -216,22 +232,17 @@ $singer = Song::list_singer_yeu_thich();
 
                         <div class="hide_nut" style=" position: absolute;bottom: 12%;right: 0%; width: fit-content; ">
                             <div class="d-flex justify-content-center">
-                                
-                                    
-                                    <i class="fa fa-heart text-primary" style="font-size: 50px; margin: 4px; position: relative;"></i>
-                                    
 
-                                    <h3 style="position: absolute; bottom: 12px"><?php echo $item["songpoints"]; ?> </h3>
-
-
-                                
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="news-grid-txt">
-                        <p class=" text-while" style="margin-bottom: 0; color:white"><?php echo $item["songsinger"]; ?></p>
+                    <div class="news-grid-txt" style="">
+                    <div style="float: left; position: relative;">
+                        <p class=" text-while" style="margin-bottom: 0; color:white; "><?php echo $item["songsinger"]; ?></p>
+                    </div>
+                        <span style="float:right; position: absolute; bottom:0; right: 0px;" class="text-primary"><?php echo $item["songpoints"]; ?></span>
                     </div>
                 </div>
             <?php } ?>
