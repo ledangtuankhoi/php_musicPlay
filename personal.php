@@ -90,7 +90,7 @@ if (isset($_SESSION['user'])) {
                         font-weight: bold;
                         text-indent: 50px;
                         /* text-align: justify; */
-                        letter-spacing: 0 3px;
+                        /*letter-spacing: 0 3px;*/
                     }
                 </style>
                 <div class="info col-lg-4  text-center">

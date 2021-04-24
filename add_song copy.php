@@ -42,11 +42,8 @@ if (isset($_POST["btnsubmit"])) {
 
     //TODO khởi tạo đối tượng product
     $newProduct = new Product($productID, $productName, $cateID, $price, $quantity, $description, $picture);
-    
     //TODO lưu xuống csdl
     $result = $newProduct->save();
-
-
 
     if (!$result) {
         //TODO truy vấn lỗi

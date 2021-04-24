@@ -40,23 +40,28 @@ class   Db
             $connection = $this->connect();
             $connection->query("SET NAMES utf8");
             $result = $connection->query($queryString);
+            // echo "query_execute  $result";
+            
             return $result;
-            $connection -> close;
-            // echo $result;
+            // $connection -> close;
+            
+
         }
 
         
         public function select_to_array($queryString){
+            
+
             $rows = array();
             $result = $this->query_execute($queryString);
-            if($result == false){
+            if($result==false) 
                 return false;
-            }
-            while($item = $result->fetch_assoc()){
+
+            while($item = $result -> fetch_assoc()){
                 $rows[] = $item;
-            }
+            }   
             return $rows;
-            print_r($rows);
+
             // $stmt = $connection->prepare("SELECT * FROM product");
             // $stmt->execute();
             // $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);

@@ -43,13 +43,12 @@ if (isset($_SESSION['user'])) {
                 <form>
                     <div class="d-flex  ">
                         <div class="dropdown">
-                            <a href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
                                 <div class="me-2 ms-1 rounded-circle border border-primary" width=" 40px">
-                                    <!-- <img src="./img/<?php echo $userimg ?>" width="40" height="40" class="rounded-circle "> -->
                                     <i class="fas fa-cog" style="font-size: 20px; margin: 10px; height: 100%;"></i>
                                 </div>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <ul class="dropdown-menu" >
                                 <li><a class="dropdown-item" href="#">Playlist</a></li>
                                 <li><a class="dropdown-item" href="#">Like</a></li>
                                 <li><a class="dropdown-item" href="logout.php">LOGOUT</a></li>

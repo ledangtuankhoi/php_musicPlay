@@ -1,32 +1,3 @@
-<?php
-require_once("./config/db.class.php");
-require_once("./Entities/category.class.php");
-require_once("./Entities/song.class.php");
-require_once("./Entities/user.class.php");
-
-
-if (!isset($_SESSION)) {
-    session_start();
-}
-
-if (isset($_SESSION['user'])) {
-    require_once("./Entities/user.class.php");
-
-
-    $user = User::login($_SESSION['user']);
-
-    $username = $user[0]["name"];
-    $userimg = $user[0]["userImg"];
-} else {
-
-    // include_once("login.php");
-    header("Location: login.php");
-}
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,82 +26,89 @@ if (isset($_SESSION['user'])) {
     <title>simple music play</title>
 </head>
 
+
 <body>
-    <div class="container-fluid">
-        <?php include_once("./nav_host/header.php") ?>
-        <?php include_once("./nav_host/left.php") ?>
-        <?php include_once("./nav_host/bottom_copy.php") ?>
 
-        <?php
+    <?php
 
+    // require_once("./config/db.class.php");
+    require_once("./Entities/category.class.php");
+    require_once("./Entities/song.class.php");
 
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 
-
-        // echo $_POST["txtName"];
-        if (isset($_POST["btnsubmit"])) {
-
-
-            $song_name = $_POST["txtName"];
-            $song_cat = $_POST["txtcate"];
-            $song_singer = $_POST["txtsinger"];
-            $song_desc = $_POST["txtdesc"];
-            $song_file = $_FILES["txtfile"];
-            $song_writer = $_POST["txtwriter"];
-            $song_img = $_FILES["txtpic"];
-
-        ?>
-
-            <script type="text/javascript">
-                console.log("<?php echo $song_name;
-                                echo  $song_name;
-                                echo $song_cat;
-                                echo $song_singer;
-                                echo $song_desc;
-                                echo $song_file;
-                                echo $song_writer;
-                                echo $song_img;  ?>");
-            </script>
-
-            <?php
-            echo "song_name=  ";
-            echo   $song_name;
-            echo "song_cat=  ";
-            echo  $song_cat;
-            echo "song_singer=  ";
-            echo  $song_singer;
-            echo "song_desc=  ";
-            echo  $song_desc;
-            // echo "song_file=  ";
-            // echo  $song_file;
-            echo "song_writer=  ";
-            echo  $song_writer;
-            // echo "song_img=  ";
-            // echo  $song_img;  
-            ?>";
+    if (isset($_SESSION['user'])) {
+        require_once("./Entities/user.class.php");
 
 
+        $user = User::login($_SESSION['user']);
 
-        <?php
-            //TODO khởi tạo đối tượng product
-            // $newProduct = new Song($song_id, $song_cat, $song_album, $song_singer, $song_desc, $song_file, $song_writer, $song_points);
-            $newSong = new Song($song_name, $song_cat,  $song_singer, $song_desc, $song_file, $song_writer, $song_img);
-            //TODO lưu xuống csdl
-            $result = $newSong->save();
+        $username = $user[0]["name"];
+        $userimg = $user[0]["userImg"];
+    } else {
 
-            if (!$result) {
-                //TODO truy vấn lỗi
-                echo $result;
-                // header("Location: add_song.php?failure");
-            } else {
-                header("Location: add_song.php?inserted");
-            }
+        // include_once("login.php");
+        header("Location: login.php");
+    }
+
+    if (isset($_POST["btnsubmit"])) {
+
+
+        $song_name = $_POST["txtName"];
+        $song_cat = $_POST["txtcate"];
+        $song_singer = $_POST["txtsinger"];
+        $song_desc = $_POST["txtdesc"];
+        $song_file = $_FILES["txtfile"];
+        $song_writer = $_POST["txtwriter"];
+        $song_img = $_FILES["txtpic"];
+
+        echo "song_name=  ";
+        echo   $song_name;
+        echo "song_cat=  ";
+        echo  $song_cat;
+        echo "song_singer=  ";
+        echo  $song_singer;
+        echo "song_desc=  ";
+        echo  $song_desc;
+        // echo "song_file=  ";
+        // echo  $song_file;
+        echo "song_writer=  ";
+        echo  $song_writer;
+        // echo "song_img=  ";
+        // echo  $song_img;  
+
+
+
+        //TODO khởi tạo đối tượng product
+        $newSong = new Song($song_name, $song_cat,  $song_singer, $song_desc, $song_file, $song_writer, $song_img);
+        //TODO lưu xuống csdl
+        $result = $newSong->save();
+        echo "kq $result";
+        if (!$result) {
+            //TODO truy vấn lỗi
+
+            header("Location: add_song.php?failure");
+        } else {
+            header("Location: add_song.php?inserted");
         }
-
-        ?>
-
+    }
 
 
-        <div id="center " class=" " style="margin: 70px 170px; padding-bottom: 70px; ">
+    ?>
+
+
+
+
+
+    <?php include_once("./nav_host/header.php") ?>
+    <?php include_once("./nav_host/left.php") ?>
+    <?php include_once("./nav_host/bottom_copy.php") ?>
+
+    <div class="container-fluid">
+
+        <div id="center " class=" " style="; padding-bottom: 70px; ">
             <?php
             if (isset($_GET["inserted"])) {
                 echo "<h2 class=' rounded d-inline-flex' style=' background-color: #00be00;'>Thêm sản phẩm thành công </h2";
@@ -142,7 +120,7 @@ if (isset($_SESSION['user'])) {
             <div class="row ${1| ,row-cols-2,row-cols-3, auto,justify-content-md-center,|} ">
                 <div class="col col-6">
 
-                    <form class=" g-3 needs-validation" method="POST" enctype="multipart/form-data" style="text-transform: initial !important;" novalidate>
+                    <form class=" g-3 needs-validation" method="POST" enctype="multipart/form-data" style="text-transform: initial !important;">
 
                         <div class="">
                             <label for="txtname" class="form-label">tên bài hát</label>
@@ -220,6 +198,8 @@ if (isset($_SESSION['user'])) {
 
     </div>
 </body>
+
+
 
 </html>
 

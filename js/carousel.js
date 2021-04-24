@@ -1,5 +1,30 @@
-// jQuery.fn.load = function(callback){ $(window).on("load", callback) };
-// $(window).on('load', function(){
+
+
+document.getElementById("carousel").getElementsByClassName("owl-next").innerText   = "<span aria-label='Next'><i class='fas fa-arrow-circle-right'></i></span>"
+document.getElementById("carousel").getElementsByClassName("owl-next").innerHTML   = "<span aria-label='Next'><i class='fas fa-arrow-circle-right'></i></span>"
+
+
+// var buttom_next = document.getElementById("carousel").getElementsByClassName("owl-next");
+// console.log(buttom)
+// buttom_next.addEventListener("load", function () {
+  
+//     audioPlayPause.innerHTML = "<i class='fas fa-arrow-circle-right'></i>";
+  
+// });
+
+// var buttom_prev = document.getElementById("carousel").getElementsByClassName("owl-prev");
+// console.log(buttom)
+// buttom_prev.addEventListener("load", function () {
+  
+//     audioPlayPause.innerHTML = "<i class='fas fa-arrow-circle-left'></i>";
+  
+// });
+
+
+
+
+
+
 
 var owl = $(".list_song");
 
@@ -38,13 +63,17 @@ $(".back").click(function () {
   owl.trigger("prev.carousel", [300]);
 });
 
+
+
+
 // _cates
-var owl1_cates = $(".list_cates");
+var owl1_cates = $(".list_cates, .list_singer, .list_song_by_cate");
 
 owl1_cates.owlCarousel({
   loop: false,
   // nav:true,
   margin: 40,
+  nav:true,
   responsive: {
     0: {
       items: 1,
@@ -58,6 +87,11 @@ owl1_cates.owlCarousel({
     1200: {
       items: 6,
     },
+    1400: {
+      items: 8,
+    },
+
+    
   },
 });
 
@@ -79,6 +113,25 @@ owl1_cates.on("dragged.owl1_cates.carousel", function (event) {
   $("body").css("overflow", "auto");
 });
 //cates end
+
+
+
+// _yeuthich
+var owl1_yeuthich = $(".list_song_by_cate");
+
+owl1_yeuthich.owlCarousel({
+  loop: false,
+  // nav:true,
+  margin: 40,
+  nav:true,
+  items: 3,
+});
+
+//cates end
+
+
+
+
 
 // _ROCK
 var owl1_ROCK = $(".list_ROCK");
