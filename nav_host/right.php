@@ -47,27 +47,27 @@ if ($songs) {
 
 
 
-// echo "<br/>";
-if (isset($_SESSION['cart'])) {
-    // foreach ($_SESSION['cart'] as $item) {
-    // echo " mangr var_dump <pre  />";
-    // var_dump($_SESSION['cart']);
-    // var_dump(print_r($_SESSION['cart']['songname']));
-    // print_r($_SESSION['cart']['songname']);
-    // var_dump($item['id']);
-    // }
-    // echo "<br/>";
+// // echo "<br/>";
+// if (isset($_SESSION['cart'])) {
+//     // foreach ($_SESSION['cart'] as $item) {
+//     // echo " mangr var_dump <pre  />";
+//     // var_dump($_SESSION['cart']);
+//     // var_dump(print_r($_SESSION['cart']['songname']));
+//     // print_r($_SESSION['cart']['songname']);
+//     // var_dump($item['id']);
+//     // }
+//     // echo "<br/>";
 
-    foreach ($_SESSION['cart'] as $item) {
-        // echo "lopw 1<br/>";
-        foreach ($item as $item2) {
-            // echo "lopw 2 <br/>";
+//     foreach ($_SESSION['cart'] as $item) {
+//         // echo "lopw 1<br/>";
+//         foreach ($item as $item2) {
+//             // echo "lopw 2 <br/>";
 
-            print_r($item2['id']);
-            print_r($item2['songname']);
-        }
-    }
-}
+//             print_r($item2['id']);
+//             print_r($item2['songname']);
+//         }
+//     }
+// }
 
 
 ?>
@@ -103,22 +103,27 @@ if (isset($_SESSION['cart'])) {
                         <span>playlist</span>
                     </div>
                     <?php
-                    foreach ($list_song_goiy as $item) {
-                        // echo ($item['songsinger'])
+                    if (isset($_SESSION['cart'])) {
+                        foreach ($_SESSION['cart'] as $item) {
+                            // echo "lopw 1<br/>";
+                            foreach ($item as $item2) {
                     ?>
 
 
-                        <li class="d-flex my-2 " style="">
-                            <a class="aTrigger" data-active="" data-audio="./audio/<?php echo $item["songfile"] ?>" data-audio-name="<?php echo $item["songname"]; ?>" data-audio-singer="<?php echo $item["songsinger"] ?>" data-audio-img="<?php echo $item["songimg"] ?>">
+                                <li class="d-flex my-2 " style="">
+                                    <a class="aTrigger" data-active="" data-audio="./audio/<?php echo $item2["songfile"] ?>" data-audio-name="<?php echo $item2["songname"]; ?>" data-audio-singer="<?php echo $item2["songsinger"] ?>" data-audio-img="<?php echo $item2["songimg"] ?>">
 
-                                <img src="<?php echo $item['songimg'] ?>" width="50" height="50" alt="">
-                            </a>
-                            <div class="ms-2">
-                                <p class="fw-bold" style=" "><?php echo $item['songname'] ?></p>
-                                <p><?php echo $item['songsinger'] ?></p>
-                            </div>
-                        </li>
+                                        <img src="<?php echo $item2['songimg'] ?>" width="50" height="50" alt="">
+                                    </a>
+                                    <div class="ms-2">
+                                        <p class="fw-bold" style=" "><?php echo $item2['songname'] ?></p>
+                                        <p><?php echo $item2['songsinger'] ?></p>
+                                    </div>
+                                </li>
                     <?php
+
+                            }
+                        }
                     }
                     ?>
 
