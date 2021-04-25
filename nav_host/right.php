@@ -18,19 +18,19 @@ if ($songs) {
     if (isset($_SESSION['cart'])) {
         if (isset($_SESSION['cart'][$id])) {
             // $_SESSION['cart'][$id]['soluong'] += 1;
-            var_dump('da ton tai ! them so luong');
+            // var_dump('da ton tai ! them so luong');
         } else {
             // $_SESSION['cart'][$id]['soluong'] = 1;
             $_SESSION['cart'][$id] = Song::song_by_id($id);
 
-            var_dump('da ton tai ! them mới');
+            // var_dump('da ton tai ! them mới');
             // header("location:/php_musicPlay/"); 
         }
     } else {
         // var_dump("chua co");
         // $_SESSION['cart'][$id]['soluong'] = 1;
         $_SESSION['cart'][$id] = Song::song_by_id($id);
-        var_dump("da them");
+        // var_dump("da them");
         // header("location:/php_musicPlay/");exit(); 
 
     }
@@ -72,7 +72,7 @@ if ($songs) {
 
 ?>
 
-<div id="right" class="transform-active p-3 bg_color " style="">
+<div id="right" class="transform p-3 bg_color " style="">
 
     <?php
 

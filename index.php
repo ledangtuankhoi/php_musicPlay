@@ -43,8 +43,8 @@
         <?php include_once("./nav_host/left.php") ?>
         <?php include_once("./nav_host/bottom_copy.php") ?>
         <?php include_once("./nav_host/right.php") ?>
-        
-        <?php include_once("./excample/one.php") ?>
+        <?php include_once("./nav_host/example.php") ?>
+
 
 
 

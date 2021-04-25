@@ -1,6 +1,7 @@
 <?php
 require_once("./Entities/song.class.php");
 require_once("./Entities/category.class.php");
+// session_destroy();
 ?>
 
 <?php
