@@ -80,12 +80,17 @@
                     <i class="fa fa-volume-off fs-3 float-start" aria-hidden="true"></i>
                     <div class="progress_volume float-end " style="color:white">asdfa </div>
                 </div>
-                <div id="playlist" class="col-6">
-                    <button class="btn" type="button">
+                <div class="col-6">
+                    <button class="btn" id="playlist" type="button">
                         <i class="fa fa-list fs-3 float-end me-3" aria-hidden="true"></i>
                     </button>
                 </div>
-
+                <script>
+                    $("#playlist").click(function() {
+                        $('.transform').toggleClass('transform-active');
+                        console.log("asdf")
+                    });
+                </script>
 
 
             </div>

@@ -99,11 +99,6 @@ if (isset($_REQUEST['songname'])) {
                                         <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
 
                                     </a>
-                                    <style>
-                                        .dropdown-menu {
-                                            border-radius: 10%;
-                                        }
-                                    </style>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                         <li><a class="dropdown-item" href="#">thêm vào playlist </a></li>
                                         <li><a class="dropdown-item" href="#">tải xuống</a></li>

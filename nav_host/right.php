@@ -5,78 +5,15 @@ $list_song = Song::list_song();
 
 ?>
 
-<style>
-    #right>div:nth-child(2)>ul {
-        margin-left: 0 !important;
-    }
-
-    li {
-        list-style: none;
-    }
-
-    #right {
-        justify-content: flex-end;
-
-
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 279px;
-        height: 100%;
-        margin: 60px 0;
-    }
-
-    #right .chucnang .tab  .active{
-        border: 1px solid white;
-        border-radius: 50rem;
-        background-color: rgb(113, 129, 151, 0.8);
-
-    }
-
-    #right .chucnang .tab ul {
-        padding-left: 0 !important;
-    }
-
-    #right .chucnang .tab ul li {
-        margin-top: 1rem;
-    }
-
-    #right .Playlist ul li p {
-        white-space: nowrap;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-    }
-
-    #scroll_right {
-        height: 100%;
-        /* border: 2px red solid; */
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-
-    #scroll_right::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: #2255c1;
-    }
-
-    #scroll_right::-webkit-scrollbar {
-        width: 6px;
-        border-radius: 10px;
-        background-color: #f5f5f5;
-    }
-</style>
-
-<div id="right" class=" p-3 bg_color " style="">
+<div id="right" class="transform p-3 bg_color " style="">
 
     <div class="chucnang d-flex justify-content-between" style="">
 
         <div class="tab d-flex justify-content-between border rounded-pill " style=" width: 198px;height: 100%;">
-            
+
             <a class="active ms-1 btn text-white rounded-pill" style="font-size:10px; margin:0 !important" href="#" role="button">danh sach nhạc</a>
             <a class=" ms-1 btn text-white rounded-pill" style="font-size:10px; margin:0 !important" href="#" role="button">danh sach nhạc</a>
-          
+
         </div>
         <div class="them">
             <i class="fa fa-stopwatch-20 fs-3"></i>

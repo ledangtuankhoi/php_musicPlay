@@ -65,11 +65,7 @@
     transition: 0.5s;
   }
 
-  #scroll_left {
-    height: 91px;
-    /* border: 2px red solid; */
-    overflow-y: scroll;
-  }
+
 /* /////center */
   
 }

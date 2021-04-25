@@ -18,6 +18,10 @@
     top: -41px !important;
 }
 
+.dropdown-menu {
+    border-radius: 10%;
+}
+
 
 #carousel > div.owl-nav.disabled{
     display: block !important;
