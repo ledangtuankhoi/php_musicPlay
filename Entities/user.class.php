@@ -71,7 +71,7 @@ class User
         
         $result = $db->select_to_array($sql);
 
-        print_r($result);
+        // print_r($result);
 
         return $result;
 
@@ -87,7 +87,4 @@ class User
         return $result;
 
     }
-}
-class Account
-{
 }

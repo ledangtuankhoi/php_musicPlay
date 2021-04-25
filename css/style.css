@@ -31,6 +31,29 @@ p {
   color: white;
 }
 
+
+.owl-slider{
+  position: relative !important;
+  margin-top: 2rem;
+} 
+
+.owl-slider .owl-nav {
+  position: absolute !important;
+  right: 0 !important;
+  top: -41px !important;
+}
+
+.dropdown-menu {
+  border-radius: 10%;
+}
+
+
+#carousel > div.owl-nav.disabled{
+  display: block !important;
+}
+
+
+
 #left > div > ul > li:nth-child(4) > a {
   background-color: #677aab;
   /* opacity: .2; */

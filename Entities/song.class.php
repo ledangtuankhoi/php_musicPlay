@@ -135,6 +135,17 @@ class Song
         return $result;
     }
 
+    public static function list_song_yeu_thich()
+    {
+        $db = new Db();
+        // $sql = "select * from tblsongs where CateID = '$cateID' ";
+        $sql ="SELECT  `songname`,   `songpoints`, `songimg` FROM `tblsongs` ORDER BY songpoints ASC";
+        // SELECT * FROM tblsongs WHERE songcat = (SELECT catname FROM tblcategory WHERE id= "34");
+        // $result = $db->select_to_array($sql);
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
+
 
 
     public static function list_song_relate($cateID, $id)

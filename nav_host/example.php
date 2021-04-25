@@ -16,6 +16,7 @@ $cates = Category::list_category();
 // print_r($cates);
 
 $singer = Song::list_singer_yeu_thich();
+$song_fa = Song::list_song_yeu_thich();
 
 
 
@@ -101,7 +102,7 @@ if (isset($_REQUEST['songname'])) {
 
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                        <li><a class="dropdown-item" href="index.php?action=add_list&id=<?php echo $item['id'] ?>">thêm vào playlist </a></li>
+                                        <li><a class="dropdown-item" href="?action=add_list&id=<?php echo $item['id'] ?>">thêm vào playlist </a></li>
                                         <li><a class="dropdown-item" href="#">tải xuống</a></li>
                                         <li><a class="dropdown-item" href="#">sao chép link</a></li>
 
@@ -272,6 +273,51 @@ if (isset($_REQUEST['songname'])) {
                     <div class="news-grid-txt">
                         <div style="float: left; position: relative;">
                             <p class=" text-while" style="margin-bottom: 0; color:white; "><?php echo $item["songsinger"]; ?></p>
+                        </div>
+                        <!-- <span style="float:right; position: absolute; bottom:0; right: 0px;" class="text-primary"></span> -->
+                    </div>
+                </div>
+            <?php } ?>
+
+        </div>
+
+    </div>
+
+    
+    <!-- ca si yeu thich -->
+
+    <!-- //  singer -->
+    <div class="owl-slider">
+        <!-- $singer =  -->
+        <div class="d-flex justify-content-between">
+
+            <h3 class="">ca sĩ được yêu thích</h3>
+
+
+        </div>
+
+
+        <div id="carousel" class="list_singer owl-carousel">
+            <?php foreach ($song_fa as $item) { ?>
+                <div class="item ">
+                    <div class='news-grid-image rounded-3' style=' height: 150px !important; '>
+                        <img class="audio-img position-relative" src='<?php echo $item["songimg"] ?>'>
+
+                        <div class="hide_nut" style=" position: absolute;bottom: 12%;right: 0%; width: fit-content; ">
+                            <div class="d-flex  align-items-center " style=" background: white; border-radius: 20%">
+                                <!-- <i class="fa fa-thumbs-up" style="font-size: 20px; color:#34478D" aria-hidden="true"></i> -->
+                                <i class="fa fa-heart" style="font-size: 20px; color:red;" aria-hidden="true" ></i>
+                                <div>
+                                    <p class="m-2 " style="color: black;"><?php echo $item["songpoints"]; ?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="news-grid-txt">
+                        <div style="float: left; position: relative;">
+                            <p class=" text-while" style="margin-bottom: 0; color:white; "><?php echo $item["songname"]; ?></p>
                         </div>
                         <!-- <span style="float:right; position: absolute; bottom:0; right: 0px;" class="text-primary"></span> -->
                     </div>

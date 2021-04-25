@@ -16,7 +16,7 @@ if (isset($_SESSION['user'])) {
     $userimg = $user[0]["userImg"];
 } else {
 
-    header('location:login.php') ;
+    header('location:login.php');
 }
 ?>
 
@@ -69,29 +69,7 @@ if (isset($_SESSION['user'])) {
                     asdfsd
                 </div>
                 <style>
-                    #person {
-                        height: 100%;
-                    }
-
-                    * {
-                        text-transform: capitalize;
-                        /* color: white; */
-                    }
-
-                    .info {
-                        background-color: rgb(91, 134, 193, 0.8);
-                        /* opacity: 0.4; */
-                        /* height: 100%; */
-
-                    }
-
-                    #person .info ul li p{
-                        color: white;
-                        font-weight: bold;
-                        text-indent: 50px;
-                        /* text-align: justify; */
-                        /*letter-spacing: 0 3px;*/
-                    }
+                    
                 </style>
                 <div class="info col-lg-4  text-center">
 
@@ -103,27 +81,45 @@ if (isset($_SESSION['user'])) {
 
                     <ul class="list-group bg-transparent border  ">
                         <li class="text-while bg-transparent list-group-item d-flex justify-content-between align-items-center">
-                            <p>bài hát</p> 
+                            <a href="./logout.php">
+
+                                anblum
+                            </a>
                             <span class="badge bg-primary rounded-pill">14</span>
                         </li>
                         <li class="bg-transparent list-group-item d-flex justify-content-between align-items-center">
-                            anblum
-                            <span class="badge bg-primary rounded-pill">2</span>
+                            <a href="./logout.php">
+
+                                bài hát
+                            </a>
+                            <span class="badge bg-primary rounded-pill">21</span>
                         </li>
                         <li class="bg-transparent list-group-item d-flex justify-content-between align-items-center">
-                            playlist
-                            <span class="badge bg-primary rounded-pill">1</span>
+                            <a href="./logout.php">
+
+                                playlist
+                            </a>
+                            <span class="badge bg-primary rounded-pill">81</span>
                         </li>
                         <li class=" bg-transparent list-group-item d-flex justify-content-between align-items-center">
-                            nghệ sĩ
-                            <span class="badge bg-primary rounded-pill">14</span>
+                            <a href="./logout.php">
+
+                                nghệ sĩ
+                            </a>
+                            <span class="badge bg-primary rounded-pill">61</span>
                         </li>
                         <li class="bg-transparent list-group-item d-flex justify-content-between align-items-center">
-                            MV
-                            <span class="badge bg-primary rounded-pill">2</span>
+                            <a href="./logout.php">
+
+                                MV
+                            </a>
+                            <span class="badge bg-primary rounded-pill">11</span>
                         </li>
                         <li class="bg-transparent list-group-item d-flex justify-content-between align-items-center">
-                            tải lên
+                            <a href="./logout.php">
+
+                                đăng xuất
+                            </a>
                             <span class="badge bg-primary rounded-pill">1</span>
                         </li>
 

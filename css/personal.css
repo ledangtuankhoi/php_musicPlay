@@ -1,0 +1,23 @@
+#person {
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  text-transform: capitalize;
+  /* color: white; */
+}
+
+.info {
+  background-color: rgb(91, 134, 193, 0.8);
+  /* opacity: 0.4; */
+  /* height: 100%; */
+}
+
+#person .info ul li p {
+  color: white;
+  font-weight: bold;
+  text-indent: 50px;
+  /* text-align: justify; */
+  /*letter-spacing: 0 3px;*/
+}
