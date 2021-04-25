@@ -1,7 +1,7 @@
 
 
-document.getElementById("carousel").getElementsByClassName("owl-next").innerText   = "<span aria-label='Next'><i class='fas fa-arrow-circle-right'></i></span>"
-document.getElementById("carousel").getElementsByClassName("owl-next").innerHTML   = "<span aria-label='Next'><i class='fas fa-arrow-circle-right'></i></span>"
+// document.getElementById("carousel").getElementsByClassName("owl-next").innerText   = "<span aria-label='Next'><i class='fas fa-arrow-circle-right'></i></span>"
+// document.getElementById("carousel").getElementsByClassName("owl-next").innerHTML   = "<span aria-label='Next'><i class='fas fa-arrow-circle-right'></i></span>"
 
 
 // var buttom_next = document.getElementById("carousel").getElementsByClassName("owl-next");

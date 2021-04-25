@@ -79,7 +79,7 @@
     /* background-color: violet; */
   }
   #scroll_left {
-    min-height: 276px;
+    height: 290px;
     /* border: 2px red solid; */
     overflow-y: scroll;
   }
