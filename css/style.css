@@ -5,6 +5,7 @@
   /* text-align: center; */
   font-size: 13px;
   color: white;
+  text-transform: capitalize;
 }
 i {
   color: white;

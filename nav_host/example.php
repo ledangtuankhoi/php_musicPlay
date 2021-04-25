@@ -100,7 +100,7 @@ if (isset($_REQUEST['songname'])) {
 
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                        <li><a class="dropdown-item" href="#">thêm vào playlist </a></li>
+                                        <li><a class="dropdown-item" href="index.php?action=add_list&id=<?php echo $item['id'] ?>">thêm vào playlist </a></li>
                                         <li><a class="dropdown-item" href="#">tải xuống</a></li>
                                         <li><a class="dropdown-item" href="#">sao chép link</a></li>
 
