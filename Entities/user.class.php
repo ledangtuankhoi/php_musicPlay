@@ -67,7 +67,7 @@ class User
 
         $db = new Db();
         $sql = "SELECT * FROM tblusers WHERE username = '$username' AND password = '$password'";
-        echo "<h3>" . $sql . "</h3>";
+        // echo "<h3>" . $sql . "</h3>";
         
         $result = $db->select_to_array($sql);
 

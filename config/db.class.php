@@ -40,7 +40,7 @@ class   Db
             $connection = $this->connect();
             $connection->query("SET NAMES utf8");
             $result = $connection->query($queryString);
-            // echo "query_execute  $result";
+            // print_r( "query_execute  $result");
             
             return $result;
             // $connection -> close;

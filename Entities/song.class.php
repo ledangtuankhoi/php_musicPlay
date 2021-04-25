@@ -85,8 +85,21 @@ class Song
         return $result;
     }
 
-    public static function list_song()
-    {
+    public static function update($songname,$songcat,$songalbum,$songsinger,$songfile,$songdesc,$songwriter,$songimg){
+        $db = new Db();
+        $connection = $db->connect();
+        // $connection->query("SET NAMES utf8");
+        // $result = $connection->query($queryString);
+        
+        $sql = "UPDATE `tblsongs` SET `songname`=$songname,`songcat`=$songcat,`songalbum`=$songalbum,`songsinger`=$songsinger,`songdesc`=$songdesc,`songfile`=$songfile,`songwriter`=$songwriter,`songimg`=$songimg";
+
+        $result = $connection->query($sql);
+        return $result;
+    }
+
+    public static function list_song(){
+
+   
         $db = new Db();
         $sql = "SELECT * FROM tblsongs";
         $result = $db->select_to_array($sql);
