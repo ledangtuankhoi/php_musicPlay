@@ -7,12 +7,12 @@
                         <div class="col-5">
                             <div class="" style=" border-radius: 50px; max-width:50px; object-fit: cover">
                                 <!-- <img id="musiccontrolImg" class="rounded-circle" src="" style=" width: 100% ;   "> -->
-                                <img id="musiccontrolImg" class="rounded-circle mx-2" src="./img/img_ (1).jpg" >
+                                <img id="musiccontrolImg" class="rounded-circle mx-2" src="./img/img_ (1).jpg">
                             </div>
                         </div>
                         <div class="col-7">
                             <div class="ml-2 mr-4 " style="width: 200px">
-                                <div id="musicControlTitle" style="white-space: nowrap; overflow: hidden;color:white;" >asdf</div>
+                                <div id="musicControlTitle" style="white-space: nowrap; overflow: hidden;color:white;">asdf</div>
                                 <div id="muiscControlsinger" style="color:white">asdfas</div>
                             </div>
                         </div>
@@ -80,8 +80,10 @@
                     <i class="fa fa-volume-off fs-3 float-start" aria-hidden="true"></i>
                     <div class="progress_volume float-end " style="color:white">asdfa </div>
                 </div>
-                <div class="col-6">
-                    <i class="fa fa-list fs-3 float-end me-3" aria-hidden="true"></i>
+                <div id="playlist" class="col-6">
+                    <button class="btn" type="button">
+                        <i class="fa fa-list fs-3 float-end me-3" aria-hidden="true"></i>
+                    </button>
                 </div>
 
 
@@ -92,4 +94,3 @@
     </div>
 
 </div>
-

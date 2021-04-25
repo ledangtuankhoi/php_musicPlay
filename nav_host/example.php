@@ -85,7 +85,7 @@ if (isset($_REQUEST['songname'])) {
                         <div class="hide_nut" style=" position: absolute;top: 40%;left: 40%;right: 50%;">
                             <div class="d-flex justify-content-center">
                                 <!-- //  click them like theem diem cho song -->
-                                <a class="like" onclick="like_song('<?php echo $item['songname']; ?>');">
+                                <a href="" class="like" onclick="like_song('<?php echo $item['songname']; ?>');">
 
                                     <i class="fa fa-heart ms-4 float-start" style="font-size: 20px; "></i>
                                 </a>
@@ -127,24 +127,6 @@ if (isset($_REQUEST['songname'])) {
 
     </div>
 
-
-    <div class="dropdown">
-        <a class="" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-ellipsis-h ms-4" style="font-size: 20px;"></i>
-
-        </a>
-        <style>
-            .dropdown-menu {
-                border-radius: 10%;
-            }
-        </style>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-            <li><a class="dropdown-item" href="#">thêm vào playlist </a></li>
-            <li><a class="dropdown-item" href="#">tải xuống</a></li>
-            <li><a class="dropdown-item" href="#">sao chép link</a></li>
-
-        </ul>
-    </div>
 
 
 
@@ -281,18 +263,21 @@ if (isset($_REQUEST['songname'])) {
                         <img class="audio-img position-relative" src='<?php echo $item["songimg"] ?>'>
 
                         <div class="hide_nut" style=" position: absolute;bottom: 12%;right: 0%; width: fit-content; ">
-                            <div class="d-flex justify-content-center">
-
+                            <div class="d-flex  align-items-center " style=" background: white; border-radius: 20%">
+                                <i class="fa fa-thumbs-up" style="font-size: 20px; color:#34478D" aria-hidden="true"></i>
+                                <div>
+                                    <p class="m-2 " style="color: black;"><?php echo $item["songpoints"]; ?></p>
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="news-grid-txt" style="">
+                    <div class="news-grid-txt">
                         <div style="float: left; position: relative;">
                             <p class=" text-while" style="margin-bottom: 0; color:white; "><?php echo $item["songsinger"]; ?></p>
                         </div>
-                        <span style="float:right; position: absolute; bottom:0; right: 0px;" class="text-primary"><?php echo $item["songpoints"]; ?></span>
+                        <!-- <span style="float:right; position: absolute; bottom:0; right: 0px;" class="text-primary"></span> -->
                     </div>
                 </div>
             <?php } ?>
